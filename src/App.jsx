@@ -5,6 +5,12 @@ import './App.css'
 function App() {
 const [barcodeScan, setBarcodeScan] = useState("No Barcode Scanned");
 
+useScanDetection({
+  onComplete: setBarcodeScan,
+  minLength: 5,
+  })
+
+  
   return (
     <>
       <div className="App" style={{ padding : "5rem 10rem"}}>
